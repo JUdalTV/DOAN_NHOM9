@@ -1,0 +1,68 @@
+tài khoản API
+tk: dungnt
+mk: dung
+python -m venv venv # tạo môi trường ảo
+fix lỗi
+
+.\venv\Scripts\activate # chạy bằng CMD trong visual studio code
+
+
+cài thư viện: 
+pip install django
+pip install requests
+pip install djangorestframework
+
+cài thư viện từ file requirement.txt
+pip install -r requirement.txt
+
+khởi tạo project django
+django-admin startproject API .
+
+
+python manage.py runserver
+python manage.py runserver <ip>:<port>
+
+python manage.py migrate
+
+tạo tài khoản admin
+python manage.py createsuperuser
+
+
+http://127.0.0.1:8000/admin
+
+python .\manage.py startapp home 
+
+Vào file setting trong thư mục API(hoặc tên j đó đã tạo)
+trong mục setting.py trỏ đến mục INSTALLED_APPS và thêm 'home',
+
+mở file model.py và làm theo file đó
+
+cài thư viện Pillow
+pip install Pillow
+
+Chạy lệnh để tạo bảng trong db:
+python .\manage.py makemigrations
+python manage.py migrate
+
+code file admin.py trong home để hiển thị trong giao diện quản trị
+
+vào setting.py sửa múi giờ
+
+Tạo API cho systeminfo
+pip install djangorestframework
+pip install drf-yasg
+
+pip install drf-spectacular
+vào setting thêm dòng 'rest_framework', 'drf_spectacular' tại INSTALLED_APPS
+
+nếu muốn kết nối đến database mà không phải db mặc định của api này thì sửa trong file setting.py như sau: 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydatabase',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
