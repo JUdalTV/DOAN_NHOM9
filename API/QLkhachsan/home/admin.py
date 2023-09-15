@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Users, Master, Hoptel, Phong
+from .models import TaiKhoan
 
 # Register your models here.
 
-class UsersAdmin(admin.ModelAdmin):
-    list_display = ('sdtkh', 'matkhau', )
+class TaiKhoanAdmin(admin.ModelAdmin):
+    list_display = ('taikhoan', 'matkhau', )
