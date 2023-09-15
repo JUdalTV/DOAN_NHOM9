@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import TaiKhoan
+from . models import TaiKhoan
 
 class TaiKhoanSerializer(serializers.ModelSerializer):
     class Meta:
